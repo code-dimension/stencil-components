@@ -1,3 +1,3 @@
-# Stencil Bulma
+# Stencil Components
 
-Set components built on top Stencil and Bulma
+Set web components built on top StencilJS

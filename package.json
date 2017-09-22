@@ -1,10 +1,10 @@
 {
-  "name": "@codedimension/stencil-bulma",
+  "name": "@codedimension/stencil-components",
   "private": true,
   "version": "0.0.0",
-  "description": "Stencil Bulma",
+  "description": "Stencil Components",
   "main": "dist/collection/index.js",
-  "browser": "dist/stencilbulma.js",
+  "browser": "dist/stencil-components.js",
   "types": "dist/collection/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [

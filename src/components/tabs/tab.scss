@@ -1,0 +1,10 @@
+.stc-tab {
+    min-height: 50px;
+    min-width: 50px;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.stc-tab-selected {
+    background: #ccc
+}

@@ -1,13 +1,9 @@
 {
-  "name": "Stencil Starter",
-  "short_name": "Stencil",
+  "name": "Stencil Components",
+  "short_name": "stc",
   "start_url": "/",
   "display": "standalone",
-  "icons": [{
-    "src": "assets/img/icon.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }],
+  "icons": [],
   "background_color": "#16161d",
   "theme_color": "#16161d"
 }
