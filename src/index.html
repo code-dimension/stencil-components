@@ -20,16 +20,21 @@
       <h1>Tabs</h1>
 
       <stc-tabs>
-        <stc-tab header="tab 1">
-        </stc-tab>
+        <stc-tab-header slot="header" column="tab1">Tab 1</stc-tab-header>
+        <stc-tab-header slot="header" column="tab2">Tab 2</stc-tab-header>
 
-        <stc-tab header="tab 1">
-          wdwqdwqdwqdqw wdwqdwqdq
-        </stc-tab>
+        <stc-tab-content slot="content" column="tab1">
+          <h1>tab1</h1>
 
-        <stc-tab header="tab 1">
-          wdwqdwqdwqdqw wdwqdwqdq
-        </stc-tab>
+          <p>tab1 tab1 tab1 tab1 tab1 tab1 tab1 tab1 tab1 tab1 </p>
+        </stc-tab-content>
+
+        <stc-tab-content slot="content" column="tab2">
+          <h1>tab2</h1>
+
+          <p>tab2 tab2 tab2 tab2 tab2 tab2 tab2 tab2 </p>
+        </stc-tab-content>
+
       </stc-tabs>
 
     </div>

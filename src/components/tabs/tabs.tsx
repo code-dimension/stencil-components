@@ -1,5 +1,10 @@
 import { Component, Element, Listen } from '@stencil/core';
-import { SelectedTabEvent, StcTab } from './tab';
+import { IStcTabContentData, IStcTabHeaderData } from './interfaces';
+
+interface ITabGroup {
+    header: IStcTabHeaderData;
+    content: IStcTabContentData;
+}
 
 @Component({
     tag: 'stc-tabs',
@@ -7,37 +12,60 @@ import { SelectedTabEvent, StcTab } from './tab';
 })
 export class StcTabs {
 
-    tabs: any[];
+    tabsHeader: IStcTabHeaderData[];
+    tabsContent: IStcTabContentData[];
+    tabGroup: ITabGroup[];
 
     @Element() host: HTMLElement;
 
     componentDidLoad() {
-        this.tabs = Array.from(this.host.querySelectorAll('stc-tab')) as any[];
+        this.createGroup();
+
+        const [group, a] = this.tabGroup;
+        this.selectGroup(a);
     }
 
-    @Listen('selectEmitter')
-    onSelectedTab(event: SelectedTabEvent) {
-        this.tabs.forEach(tab => tab.unselect())
-        event.tabInstance.select();
-
-        this.setContent(event.content);
+    @Listen('onSelect')
+    onSelectedTab(event: CustomEvent) {
+        const group = this.tabGroup.find(group => group.header.id === event.detail.id);
+        this.selectGroup(group);    
     }
 
-    setContent(tabContent: Element) {
-        const content = this.host.querySelector('.stc-tabs-content');
+    createGroup() {
+        const tabsHeaderEl = Array.from(this.host.querySelectorAll('stc-tab-header')) as any[];
+        this.tabsHeader = tabsHeaderEl.map(el => el.getChild());
 
-        Array.from(tabContent.children).forEach(child => {
-            content.appendChild(child);
+        const tabsContentEl = Array.from(this.host.querySelectorAll('stc-tab-content')) as any[];
+        this.tabsContent = tabsContentEl.map(el => el.getChild());
+
+        this.tabGroup = this.tabsHeader.map(header => {
+            const content = this.tabsContent.find(content => content.column === header.column);
+
+            return {
+                header: header,
+                content: content
+            }
         });
     }
 
-    render() {
-        return (
-            <div class="stc-tabs">
-                <slot />
+    selectGroup(group: ITabGroup) {
+        this.tabGroup.forEach(_ => { 
+            _.header.unselect();
+            _.content.unselect();
+        });
 
-                <div class="stc-tabs-content"></div>
+        group.header.select();
+        group.content.select();
+    }
+
+    render() {
+        return [
+            <div class="stc-tabs">
+                <slot name="header" />
+            </div>,
+            <div>
+                <slot name="content" />
             </div>
-        );
+        ];
     }
 }
