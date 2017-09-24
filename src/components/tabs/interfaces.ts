@@ -1,7 +1,7 @@
 export interface IStcTabData {
     select: () => void;
     unselect: () => void;
-    column: string;
+    name: string;
 }
 
 export interface IStcTabHeaderData extends IStcTabData {

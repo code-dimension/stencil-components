@@ -14,7 +14,7 @@ export class StcTabHeader {
     id: string = generateId()
 
     @Prop()
-    column: string;
+    name: string;
 
     @Event()
     onSelect: EventEmitter;
@@ -27,7 +27,7 @@ export class StcTabHeader {
         return {
             select: this.select.bind(this),
             unselect: this.unselect.bind(this),
-            column: this.column,
+            name: this.name,
             id: this.id
         }
     }
@@ -46,10 +46,10 @@ export class StcTabHeader {
 
     render() {
 
-        const classes = [
-            this.isSelected ? 'stc-tab-selected' : '',
-            'stc-tab'
-        ].join(' ');
+        const classes = {
+            'stc-tab-header': true,
+            'stc-tab-header-selected': this.isSelected 
+        };
 
         return [
             <div class={classes} onClick={this.onClick.bind(this)}>

@@ -1,10 +1,13 @@
-.stc-tab {
+.stc-tab-header {
     min-height: 50px;
-    min-width: 50px;
+    min-width: 150px;
+    cursor: pointer;
+
     display: flex;
-    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center
 }
 
-.stc-tab-selected {
-    background: #ccc
+.stc-tab-header-selected {
+    border-bottom: 2px solid #3f51b5;
 }

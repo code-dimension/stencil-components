@@ -21,8 +21,8 @@ export class StcTabs {
     componentDidLoad() {
         this.createGroup();
 
-        const [group, a] = this.tabGroup;
-        this.selectGroup(a);
+        const [group] = this.tabGroup;
+        this.selectGroup(group);
     }
 
     @Listen('onSelect')
@@ -39,7 +39,7 @@ export class StcTabs {
         this.tabsContent = tabsContentEl.map(el => el.getChild());
 
         this.tabGroup = this.tabsHeader.map(header => {
-            const content = this.tabsContent.find(content => content.column === header.column);
+            const content = this.tabsContent.find(content => content.name === header.name);
 
             return {
                 header: header,
@@ -60,10 +60,10 @@ export class StcTabs {
 
     render() {
         return [
-            <div class="stc-tabs">
+            <div class="stc-tabs-header">
                 <slot name="header" />
             </div>,
-            <div>
+            <div class="stc-tabs-content"> 
                 <slot name="content" />
             </div>
         ];

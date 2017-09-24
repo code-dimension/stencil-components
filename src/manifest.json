@@ -1,9 +1,0 @@
-{
-  "name": "Stencil Components",
-  "short_name": "stc",
-  "start_url": "/",
-  "display": "standalone",
-  "icons": [],
-  "background_color": "#16161d",
-  "theme_color": "#16161d"
-}

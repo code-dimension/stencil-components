@@ -6,12 +6,13 @@ import {
 import { IStcTabContentData } from './interfaces';
 
 @Component({
-    tag: 'stc-tab-content'
+    tag: 'stc-tab-content',
+    styleUrl: 'tab-content.scss'
 })
 export class StcTabContent {
 
     @Prop()
-    column: string;
+    name: string;
 
     @State()
     isSelected: boolean = false;
@@ -21,7 +22,7 @@ export class StcTabContent {
         return {
             select: this.select.bind(this),
             unselect: this.unselect.bind(this),
-            column: this.column
+            name: this.name
         }
     }
 
@@ -34,13 +35,14 @@ export class StcTabContent {
     }
 
     render() {
-        const classes = [
-            'stc-tab-content',
-            this.isSelected ? 'stc-tab-content-selected' : ''
-        ].join(' ');    
-        
+
+        const classes = {
+            'stc-tab-content': true,
+            'stc-tab-content-selected': this.isSelected
+        }
+            
         return (
-            <div class={ classes }>
+            <div class={classes}>
                 <slot />
             </div>
         );
