@@ -1,3 +1,3 @@
 # Stencil Components
 
-Set web components built on top StencilJS
+Web components built on top StencilJS
