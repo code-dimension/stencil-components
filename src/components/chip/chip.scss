@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.stc-chip {
+    display: inline-flex;
+    position: relative;
+
+    align-items: center;
+    height: 15px;
+    padding: 10px;
+    background: #e4e4e4;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: $fontFamily;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.stc-chip-extra-pd-lt {
+    padding-left: 40px;
+}
+
+.stc-chip-text {
+    min-width: 20px;
+}
+
+.stc-chip-image {
+    position: absolute;
+    left: -1px;
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+}    
+
+.stc-chip-close {
+    height: 15px;
+    width: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+}
