@@ -1,6 +1,6 @@
 {
   "name": "@codedimension/stencil-components",
-  "version": "0.0.0-alpha",
+  "version": "0.0.0-alpha.1",
   "description": "Stencil Components",
   "main": "dist/collection/index.js",
   "browser": "dist/stencilcomponents.js",
@@ -12,7 +12,6 @@
   "scripts": {
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "publish": "np",
     "serve": "stencil-dev-server",
     "start": "npm run dev"
   },
