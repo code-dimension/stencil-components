@@ -31,10 +31,10 @@ The prop **name** value should be equal for `stc-tab-header` and `stc-tab-conten
         <stc-tab-header slot="header" name="tab1">Tab 1</stc-tab-header>
         <stc-tab-header slot="header" name="tab2">Tab 2</stc-tab-header>
         <stc-tab-content slot="content" name="tab1">
-            Content
+            Content 1
         </stc-tab-content>
         <stc-tab-content slot="content" name="tab2">
-            Content
+            Content 2
         </stc-tab-content>
     </stc-tabs>
 </div>
