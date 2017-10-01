@@ -6,6 +6,26 @@ Web components built on top StencilJS
 
 ### Chip
 
+Simple chip
+
+```html
+    <stc-chip text="simple chip"></stc-chip>
+```
+
+<div>
+    <stc-chip text="simple chip"></stc-chip>
+</div>
+
+Closeable chip
+
+```html
+    <stc-chip text="closeable chip" closeable></stc-chip>
+```
+
+<div>
+    <stc-chip text="closeable chip" closeable></stc-chip>
+</div>
+
 Chip with image
 
 ```html
@@ -13,11 +33,6 @@ Chip with image
 ```
 
 <div>
-    <script src="https://unpkg.com/@codedimension/stencil-components@0.0.0-alpha/dist/stencilcomponents.js"></script>
-    
-    <stc-chip image="/assets/images/stenciljs.jpg" text="image chip"></stc-chip>
-    <stc-chip image="" text="just a chip"></stc-chip>
-    <stc-chip image="" text="closeable chip" closeable></stc-chip>
-    <stc-chip image="/assets/images/stenciljs.jpg" text="closeable chip" closeable></stc-chip>
+    <stc-chip image="{{ "/assets/images/stenciljs.jpg" | relative_url }}" text="image chip"></stc-chip>
 </div>
 
