@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stencil Components</title>
+
+    <script src="https://unpkg.com/@codedimension/stencil-components@0.0.0-alpha/dist/stencilcomponents.js"></script>
+
+</head>
+
+<body>
+    <section class="section">
+
+        <div class="container">
+            <h1>Chip</h1>
+
+            <stc-chip image="/assets/images/stenciljs.jpg" text="image chip"></stc-chip>
+            <stc-chip image="" text="just a chip"></stc-chip>
+            <stc-chip image="" text="closeable chip" closeable></stc-chip>
+            <stc-chip image="/assets/images/stenciljs.jpg" text="closeable chip" closeable></stc-chip>
+        </div>
+
+        <div class="container">
+            <h1>Tabs</h1>
+
+            <stc-tabs>
+                <stc-tab-header slot="header" name="tab1">Tab 1</stc-tab-header>
+                <stc-tab-header slot="header" name="tab2">Tab 2</stc-tab-header>
+
+                <stc-tab-content slot="content" name="tab1">
+                    <h1>tab1</h1>
+
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                        a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                        like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </stc-tab-content>
+
+                <stc-tab-content slot="content" name="tab2">
+                    <h1>tab2</h1>
+
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                        a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                        like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    
+                </stc-tab-content>
+
+            </stc-tabs>
+
+        </div>
+    </section>
+</body>
+
+</html>

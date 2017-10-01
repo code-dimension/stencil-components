@@ -1,6 +1,6 @@
 {
   "name": "@codedimension/stencil-components",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha",
   "description": "Stencil Components",
   "main": "dist/collection/index.js",
   "browser": "dist/stencilcomponents.js",

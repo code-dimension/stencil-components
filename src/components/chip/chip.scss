@@ -3,7 +3,7 @@
 .stc-chip {
     display: inline-flex;
     position: relative;
-
+    box-sizing: content-box;
     align-items: center;
     height: 15px;
     padding: 10px;
@@ -37,7 +37,7 @@
 }    
 
 .stc-chip-close {
-    height: 15px;
+    // height: 15px;
     width: 15px;
     color: rgba(0, 0, 0, 0.6);
     font-weight: bold;
