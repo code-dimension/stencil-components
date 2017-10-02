@@ -1,6 +1,7 @@
 # npmignore
 
 www/build
+docs
 
 *~
 *.sw[mnpcod]
