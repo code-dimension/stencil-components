@@ -5,7 +5,7 @@ import { Component, Prop, Event, EventEmitter } from '@stencil/core';
     styleUrl: 'chip.scss'
 })
 export class StcChip {
-    
+
     @Prop()
     image: string;
 
@@ -23,7 +23,7 @@ export class StcChip {
     }
 
     render() {
-        
+
         const image = (() => {
             if (this.image) {
                 return (
@@ -38,12 +38,12 @@ export class StcChip {
             if (this.closeable) {
                 return <span class="stc-chip-close" onClick={this.onClose.bind(this)}>X</span>;
             }
-        })()
+        })();
 
         const chipClasses = {
             'stc-chip': true,
             'stc-chip-extra-pd-lt': !!this.image
-        }
+        };
 
         return (
             <div class={chipClasses}>

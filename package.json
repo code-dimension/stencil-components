@@ -13,19 +13,17 @@
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
-    "prepublish": "npm run build",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "test": "jest --no-cache"
   },
   "dependencies": {
-    "path-to-regexp": "2.0.0"
+    "@stencil/core": "0.0.6-2"
   },
   "devDependencies": {
-    "@stencil/core": "0.0.5",
-    "@stencil/dev-server": "0.0.17",
-    "@stencil/utils": "0.0.4",
-    "jekyll": "^3.0.0-beta1",
-    "np": "2.16.0",
-    "npmignore": "0.2.0"
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest",
+    "@types/jest": "^21.1.1",
+    "jest": "^21.2.1"
   },
   "repository": {
     "type": "git",
@@ -36,5 +34,18 @@
   "bugs": {
     "url": "https://github.com/CodeDimension/stencil-components"
   },
-  "homepage": "https://github.com/CodeDimension/stencil-components"
+  "homepage": "https://github.com/ionic-team/stencil",
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
 }
