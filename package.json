@@ -13,6 +13,7 @@
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
+    "prepublish": "npm run build",
     "start": "npm run dev",
     "test": "jest --no-cache"
   },
@@ -34,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/CodeDimension/stencil-components"
   },
-  "homepage": "https://github.com/ionic-team/stencil",
+  "homepage": "https://github.com/CodeDimension/stencil-components",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
