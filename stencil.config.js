@@ -8,3 +8,8 @@ exports.config = {
   ],
   // global: 'src/global/router.ts'
 };
+
+exports.devServer = {
+  root: 'www',
+  watchGlob: '**/**'
+};

@@ -1,5 +1,5 @@
-import {StcChip} from './chip';
-import {flush, render} from '@stencil/core/testing';
+import { flush, render } from '@stencil/core/testing';
+import { StcChip } from './chip';
 
 describe('chip', () => {
   it('should build', () => {
