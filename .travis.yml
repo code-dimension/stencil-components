@@ -7,3 +7,6 @@ install:
 
 script:
 - npm run build-prod
+
+notifications:
+    slack: codedimension:ai5g5FeGoYJwpvv6FklyQjf4
