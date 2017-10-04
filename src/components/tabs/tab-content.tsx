@@ -23,7 +23,7 @@ export class StcTabContent {
             select: this.select.bind(this),
             unselect: this.unselect.bind(this),
             name: this.name
-        }
+        };
     }
 
     unselect() {
@@ -39,7 +39,7 @@ export class StcTabContent {
         const classes = {
             'stc-tab-content': true,
             'stc-tab-content-selected': this.isSelected
-        }
+        };
             
         return (
             <div class={classes}>

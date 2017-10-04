@@ -2,7 +2,7 @@
 
 Web components built on top StencilJS
 
-[![Build Status](https://travis-ci.org/CodeDimension/stencil-components.svg?branch=master)](https://travis-ci.org/CodeDimension/stencil-components) [![Coverage Status](https://coveralls.io/repos/github/CodeDimension/stencil-components/badge.svg?branch=master)](https://coveralls.io/github/CodeDimension/stencil-components?branch=master)
+[![Build Status](https://travis-ci.org/CodeDimension/stencil-components.svg?branch=master)](https://travis-ci.org/CodeDimension/stencil-components) [![Coverage Status](https://coveralls.io/repos/github/CodeDimension/stencil-components/badge.svg?branch=master)](https://coveralls.io/github/CodeDimension/stencil-components?branch=master) [![npm version](https://badge.fury.io/js/%40code-dimension%2Fstencil-components.svg)](https://badge.fury.io/js/%40code-dimension%2Fstencil-components)
 
 
 ## How to install

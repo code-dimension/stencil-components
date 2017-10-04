@@ -11,7 +11,7 @@ import { generateId } from './functions';
 })
 export class StcTabHeader {
 
-    id: string = generateId()
+    id: string = generateId();
 
     @Prop()
     name: string;
@@ -29,7 +29,7 @@ export class StcTabHeader {
             unselect: this.unselect.bind(this),
             name: this.name,
             id: this.id
-        }
+        };
     }
 
     unselect() {

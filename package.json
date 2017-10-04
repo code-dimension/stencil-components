@@ -10,12 +10,15 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build && npm test",
+    "build-prod": "npm run lint && stencil build && npm run coverage",
+    "build": "npm run lint && stencil build && npm test",
+    "coverage": "jest --no-cache --coverage && cat ./coverage/lcov.info | npx coveralls",
+    "test": "jest --no-cache",
+    "lint": "npx tslint -p tsconfig.json",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "prepublish": "npm run build",
-    "start": "npm run dev",
-    "test": "jest --no-cache --coverage && cat ./coverage/lcov.info | npx coveralls"
+    "start": "npm run dev"
   },
   "dependencies": {
     "@stencil/core": "0.0.6-3"
@@ -24,8 +27,9 @@
     "@stencil/dev-server": "0.0.13",
     "@stencil/utils": "0.0.4",
     "@types/jest": "21.1.2",
-    "coveralls": "^3.0.0",
-    "jest": "21.2.1"
+    "coveralls": "3.0.0",
+    "jest": "21.2.1",
+    "tslint": "5.7.0"
   },
   "repository": {
     "type": "git",
