@@ -13,7 +13,7 @@
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm test",
     "start": "npm run dev",
     "test": "jest --no-cache"
   },
@@ -23,8 +23,8 @@
   "devDependencies": {
     "@stencil/dev-server": "0.0.13",
     "@stencil/utils": "0.0.4",
-    "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "@types/jest": "21.1.2",
+    "jest": "21.2.1"
   },
   "repository": {
     "type": "git",
