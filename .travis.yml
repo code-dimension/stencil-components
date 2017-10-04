@@ -7,4 +7,3 @@ install:
 
 script:
 - npm run build
-- npx coveralls
