@@ -10,10 +10,10 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build",
+    "build": "stencil build && npm test",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
-    "prepublish": "npm run build && npm test",
+    "prepublish": "npm run build",
     "start": "npm run dev",
     "test": "jest --no-cache"
   },
@@ -24,6 +24,7 @@
     "@stencil/dev-server": "0.0.13",
     "@stencil/utils": "0.0.4",
     "@types/jest": "21.1.2",
+    "coveralls": "^3.0.0",
     "jest": "21.2.1"
   },
   "repository": {

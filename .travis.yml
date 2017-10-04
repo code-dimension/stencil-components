@@ -1,0 +1,8 @@
+language: node_js
+
+install: 
+- npm i
+
+script:
+- npm run build
+- npx coveralls
