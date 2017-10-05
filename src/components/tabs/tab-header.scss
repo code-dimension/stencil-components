@@ -1,11 +1,20 @@
 .stc-tab-header {
-    min-height: 50px;
+    min-height: 40px;
     min-width: 150px;
+    padding: 5px;
+
     cursor: pointer;
 
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    border-bottom: 2px solid transparent;
+}
+
+@media (max-width: 599px) {
+    .stc-tab-header {
+        min-width: 100px;
+    }
 }
 
 .stc-tab-header-selected {
