@@ -119,3 +119,31 @@ declare global {
   }
 }
 
+import { StcTagsComponent as StcTags } from './components/tags/tags';
+
+interface HTMLStcTagsElement extends StcTags, HTMLElement {
+}
+declare var HTMLStcTagsElement: {
+  prototype: HTMLStcTagsElement;
+  new (): HTMLStcTagsElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "stc-tags": HTMLStcTagsElement;
+  }
+  interface ElementTagNameMap {
+      "stc-tags": HTMLStcTagsElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "stc-tags": JSXElements.StcTagsAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface StcTagsAttributes extends HTMLAttributes {
+        
+          tags?: any
+      }
+  }
+}
+
