@@ -4,9 +4,9 @@ exports.config = {
   generateWWW: true,
   bundles: [
     { components: ['stc-tabs', 'stc-tab-header', 'stc-tab-content'] },
-    { components: ['stc-chip', 'stc-tags'] },
-  ],
-  // global: 'src/global/router.ts'
+    { components: ['stc-chip'] },
+    { components: ['stc-tags'] }
+  ]
 };
 
 exports.devServer = {

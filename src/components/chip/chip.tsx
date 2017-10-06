@@ -15,7 +15,7 @@ export class StcChip {
     @Prop()
     closeable: boolean = false;
 
-    @Event({ eventName: 'close'})
+    @Event({ eventName: 'stc-chip-close'})
     close: EventEmitter;
 
     onClose() {

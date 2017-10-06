@@ -142,7 +142,8 @@ declare global {
   namespace JSXElements {
       export interface StcTagsAttributes extends HTMLAttributes {
         
-          tags?: any
+          tags?: any,
+          placeholder?: any
       }
   }
 }

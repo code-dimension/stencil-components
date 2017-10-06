@@ -1,4 +1,5 @@
 import { Component, Prop, State, Listen } from '@stencil/core';
+import { parseToJS } from '../../util/functions';
 
 interface Tag {
     text: string;
@@ -12,10 +13,18 @@ export class StcTagsComponent {
 
     @State() state: Tag[] = [];
 
-    @Prop() tags: Tag[];
+    @Prop()
+    tags: Tag[];
 
-    @Listen('close')
+    @Prop() placeholder: string = 'Add a tag';
+
+    @Listen('stc-chip-close')
     onTagClose() { }
+
+    componentWillLoad() {
+        const tags = parseToJS(this.tags);
+        this.state = tags;
+    }
 
     onInput(event) {
         if (event.keyCode !== 13) {
@@ -39,8 +48,14 @@ export class StcTagsComponent {
     }
 
     render() {
+
+        const classes = {
+            'stc-tags': true,
+            'stc-tags--no-tag': !this.state.length
+        };
+
         return (
-            <div class="stc-tags">
+            <div class={classes}>
                 {
                     this.state.map(item => {
                         return (
@@ -51,7 +66,7 @@ export class StcTagsComponent {
                     })
                 }
 
-                <input type="text" placeholder="Texxttt" onKeyPress={this.onInput.bind(this)} />
+                <input type="text" class="stc-tags-input" placeholder={this.placeholder} onKeyPress={this.onInput.bind(this)} />
             </div>
         );
     }

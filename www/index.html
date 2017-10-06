@@ -16,6 +16,14 @@
 
       <stc-tags></stc-tags>
 
+      <script>
+        document.querySelector('stc-tags').setAttribute('tags', "[{ text: 'dynamixx' }]")
+
+        const stcTags = document.createElement('stc-tags');
+        stcTags.setAttribute('tags', "[{ text: 'my taggg' }]")
+        document.body.appendChild(stcTags); 
+      </script>
+
       <h1>Chip</h1>
 
       <stc-chip image="http://nodeframework.com/assets/img/js.png" text="image chip"></stc-chip>

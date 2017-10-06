@@ -44,10 +44,10 @@ Chip with image
 | ----- | ----- | ---------- |
 | text | string | Text will be showed in the center of chip |
 | image | string | Url image will be showed on the left side of chip  |
-| closeable | boolean |  Whether the chip can be closed. Default value é `false`. |
+| closeable | boolean |  Whether the chip can be closed. Default value is `false`. |
 
 ## Events
 
 | name | value | description | 
 | ----- | ----- | ---------- |
-| close | void | Event trigged when user close the chip. This event only will be trigged if closeable prop be `true` |
+| stc-chip:close | void | Event trigged when user close the chip. This event only will be trigged if closeable prop be `true` |
