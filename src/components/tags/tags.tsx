@@ -33,7 +33,6 @@ export class StcTagsComponent {
 
     @Listen('stc-chip-close')
     onTagClose(event: CustomEvent) {
-        debugger
         const detail: StcChipCloseEvent = event.detail;
         this.state = this.state.filter(item => item.id !== detail.id);
     }
