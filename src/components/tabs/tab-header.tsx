@@ -3,7 +3,7 @@ import {
 } from '@stencil/core';
 
 import { IStcTabHeaderData } from './interfaces';
-import { generateId } from './functions';
+import { generateId } from '../../util/functions';
 
 @Component({
     tag: 'stc-tab-header',

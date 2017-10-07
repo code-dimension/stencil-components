@@ -1,8 +1,13 @@
-import { Component, Prop, State, Listen } from '@stencil/core';
-import { parseToJS } from '../../util/functions';
+import { Component, Prop, State, Listen, Element } from '@stencil/core';
+import { StcChip, StcChipCloseEvent } from '../chip/chip';
 
 interface Tag {
     text: string;
+    image?: string;
+}
+
+interface TagState extends Tag {
+    id: string;
 }
 
 @Component({
@@ -11,19 +16,53 @@ interface Tag {
 })
 export class StcTagsComponent {
 
-    @State() state: Tag[] = [];
+    private chips: StcChip[];
 
-    @Prop()
-    tags: Tag[];
+    @Element() host: HTMLElement;
+
+    @State() state: TagState[] = [];
+
+    @Prop() tags: Tag[] = [];
 
     @Prop() placeholder: string = 'Add a tag';
 
-    @Listen('stc-chip-close')
-    onTagClose() { }
+    // @PropDidChange('tags')
+    // tagsWillChange(newValue: Tag[]) {
+    //     this.createState(newValue);
+    // }
 
-    componentWillLoad() {
-        const tags = parseToJS(this.tags);
-        this.state = tags;
+    @Listen('stc-chip-close')
+    onTagClose(event: CustomEvent) {
+        debugger
+        const detail: StcChipCloseEvent = event.detail;
+        this.state = this.state.filter(item => item.id !== detail.id);
+    }
+
+    componentDidLoad() {
+        this.createState(this.tags);
+    }
+
+    componentDidUpdate() {
+        this.createState(this.tags);
+    }
+
+    // Has a bug related the state
+    createState(tags: Tag[]) {
+        if (!tags || !Array.isArray(tags)) {
+            return;
+        }
+
+        const chips = this.chips = this.host.querySelectorAll('stc-chip') as any;
+
+        this.state = Array.from(chips)
+            .map((chip: StcChip) => chip.getId())
+            .map((chipId, index) => {
+                return {
+                    ...tags[index],
+                    ...{ id: chipId }
+                };
+            });
+            
     }
 
     onInput(event) {
@@ -44,23 +83,18 @@ export class StcTagsComponent {
     }
 
     addTag(text: string) {
-        this.state = [...this.state, { text: text }];
+        this.createState([...this.state, { text: text }]);
     }
 
     render() {
 
-        const classes = {
-            'stc-tags': true,
-            'stc-tags--no-tag': !this.state.length
-        };
-
         return (
-            <div class={classes}>
+            <div class="stc-tags">
                 {
                     this.state.map(item => {
                         return (
                             <div class="stc-tag">
-                                <stc-chip text={item.text} closeable></stc-chip>
+                                <stc-chip image={item.image} text={item.text} closeable></stc-chip>
                             </div>
                         );
                     })

@@ -13,15 +13,31 @@
 <body>
 
       <h1>Tags</h1>
-
-      <stc-tags></stc-tags>
+<!--  -->
+      <stc-tags placeholder="Escreva"></stc-tags>
 
       <script>
-        document.querySelector('stc-tags').setAttribute('tags', "[{ text: 'dynamixx' }]")
+        function create() {
+          const stcTags =  document.createElement('stc-tags');
+          console.log('create', stcTags)
+          stcTags.tags = [{ text: 'create' }]
+          console.log('create', stcTags, stcTags.tags)
+          document.body.appendChild(stcTags)
+        }        
 
-        const stcTags = document.createElement('stc-tags');
-        stcTags.tags = "[{ text: 'my qqwdqdwqdqw' }]"
-        document.body.appendChild(stcTags); 
+        function setProp() {
+          const stcTags =  document.querySelector('stc-tags');
+          console.log('setProp', stcTags)
+          stcTags.tags = [
+            { image:'http://nodeframework.com/assets/img/js.png',  text: 'change' }]
+          console.log('setProp', stcTags, stcTags.tags)
+        }        
+
+        
+        // create();
+        setTimeout(() => {
+          setProp();
+        }, 2000)
       </script>
 
       <h1>Chip</h1>
