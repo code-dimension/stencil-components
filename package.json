@@ -1,6 +1,6 @@
 {
   "name": "@code-dimension/stencil-components",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-beta",
   "description": "Stencil Components",
   "main": "dist/collection/index.js",
   "browser": "dist/stencilcomponents.js",
@@ -10,22 +10,26 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build",
+    "build-prod": "npm run lint && stencil build && npm run coverage",
+    "build": "npm run lint && stencil build && npm test",
+    "coverage": "jest --no-cache --coverage && cat ./coverage/lcov.info | npx coveralls",
+    "test": "jest --no-cache",
+    "lint": "npx tslint -p tsconfig.json",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "prepublish": "npm run build",
     "start": "npm run dev"
   },
   "dependencies": {
-    "path-to-regexp": "2.0.0"
+    "@stencil/core": "0.0.6-11"
   },
   "devDependencies": {
-    "@stencil/core": "0.0.5",
     "@stencil/dev-server": "0.0.17",
     "@stencil/utils": "0.0.4",
-    "jekyll": "^3.0.0-beta1",
-    "np": "2.16.0",
-    "npmignore": "0.2.0"
+    "@types/jest": "21.1.2",
+    "coveralls": "3.0.0",
+    "jest": "21.2.1",
+    "tslint": "5.7.0"
   },
   "repository": {
     "type": "git",
@@ -36,5 +40,18 @@
   "bugs": {
     "url": "https://github.com/CodeDimension/stencil-components"
   },
-  "homepage": "https://github.com/CodeDimension/stencil-components"
+  "homepage": "https://github.com/CodeDimension/stencil-components",
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
 }

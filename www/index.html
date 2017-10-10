@@ -11,22 +11,50 @@
 </head>
 
 <body>
-  <section class="section">
 
-    <div class="container">
+      <h1>Tags</h1>
+<!--  -->
+      <stc-tags placeholder="Escreva"></stc-tags>
+
+      <script>
+        function create() {
+          const stcTags =  document.createElement('stc-tags');
+          console.log('create', stcTags)
+          stcTags.tags = [{ text: 'create' }]
+          console.log('create', stcTags, stcTags.tags)
+          document.body.appendChild(stcTags)
+        }        
+
+        function setProp() {
+          const stcTags =  document.querySelector('stc-tags');
+          console.log('setProp', stcTags)
+          stcTags.tags = [
+            { image:'http://nodeframework.com/assets/img/js.png',  text: 'change' }]
+          console.log('setProp', stcTags, stcTags.tags)
+        }        
+
+        document.querySelector('stc-tags')
+          .addEventListener('stc-chip-close', (e) => {
+            console.log(e)
+          })
+        
+        // create();
+        setTimeout(() => {
+          setProp();
+        }, 2000)
+      </script>
+
       <h1>Chip</h1>
 
       <stc-chip image="http://nodeframework.com/assets/img/js.png" text="image chip"></stc-chip>
       <stc-chip image="" text="just a chip"></stc-chip>
       <stc-chip image="" text="closeable chip" closeable></stc-chip>
       <stc-chip image="http://nodeframework.com/assets/img/js.png" text="closeable chip" closeable></stc-chip>
-    </div>
 
-    <div class="container">
       <h1>Tabs</h1>
 
       <stc-tabs>
-        <stc-tab-header slot="header" name="tab1">Tab SS</stc-tab-header>
+        <stc-tab-header slot="header" name="tab1">Tab SS wdwqdqwdq wq wd</stc-tab-header>
         <stc-tab-header slot="header" name="tab2">Tab 2</stc-tab-header>
 
         <stc-tab-content slot="content" name="tab1">
@@ -43,8 +71,6 @@
 
       </stc-tabs>
 
-    </div>
-  </section>
 </body>
 
 </html>

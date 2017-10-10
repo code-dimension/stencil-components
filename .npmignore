@@ -2,6 +2,7 @@
 
 www/build
 docs
+coverage
 
 *~
 *.sw[mnpcod]

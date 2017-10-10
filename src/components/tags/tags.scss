@@ -1,0 +1,18 @@
+.stc-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    box-shadow: 1px 1px 5px 1px #ccc;
+}
+
+.stc-tags-input {
+    border: 0;
+    margin: 0 5px;
+    outline: none;
+    height: 35px;
+}
+
+.stc-tag {
+    margin: 2px
+}

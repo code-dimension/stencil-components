@@ -44,7 +44,7 @@ export class StcTabs {
             return {
                 header: header,
                 content: content
-            }
+            };
         });
     }
 

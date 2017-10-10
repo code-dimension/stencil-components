@@ -5,6 +5,11 @@ exports.config = {
   bundles: [
     { components: ['stc-tabs', 'stc-tab-header', 'stc-tab-content'] },
     { components: ['stc-chip'] },
-  ],
-  // global: 'src/global/router.ts'
+    { components: ['stc-tags'] }
+  ]
+};
+
+exports.devServer = {
+  root: 'www',
+  watchGlob: '**/**'
 };

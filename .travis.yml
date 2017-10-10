@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- "node"
+
+notifications:
+  slack: codedimension:6r23cvUSMOKuFiD3m2epuCQ3
+
+install: 
+- npm i
+
+script:
+- npm run build-prod
