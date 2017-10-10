@@ -9,34 +9,34 @@ selector: `stc-tags`
 Basic usage
 
 ```html
-<stc-tags><stc-tags>
+<stc-tags></stc-tags>
 ```
 
 <div class="demo-container">
-    <stc-tags><stc-tags>
+    <stc-tags></stc-tags>
 </div>
 
 Adding a custom placeholder
 
 ```html
-<stc-tags placeholder="My custom placeholder"><stc-tags>
+<stc-tags placeholder="My custom placeholder"></stc-tags>
 ```
 
 <div class="demo-container">
-    <stc-tags placeholder="My custom placeholder"><stc-tags>
+    <stc-tags placeholder="My custom placeholder"></stc-tags>
 </div>
 
 Adding tags on load
 
 ```html
-<stc-tags placeholder="My custom placeholder"><stc-tags>
+<stc-tags placeholder="My custom placeholder"></stc-tags>
 ```
 ```js
 document.querySelector('stc-tags').tags = [{ text: 'first tag' }];
 ```
 
 <div id="adding-onload" class="demo-container">
-    <stc-tags placeholder="My custom placeholder"><stc-tags>
+    <stc-tags placeholder="My custom placeholder"></stc-tags>
 </div>
 
 <script>
@@ -46,7 +46,7 @@ document.querySelector('stc-tags').tags = [{ text: 'first tag' }];
 Adding tags after delay
 
 ```html
-<stc-tags placeholder="My custom placeholder"><stc-tags>
+<stc-tags placeholder="My custom placeholder"></stc-tags>
 ```
 ```js
 setTimeout(() => {
@@ -59,7 +59,7 @@ setTimeout(() => {
 </div>
 
 <div id="adding-after-delay" class="demo-container">
-    <stc-tags placeholder="My custom placeholder"><stc-tags>
+    <stc-tags placeholder="My custom placeholder"></stc-tags>
 </div>
 
 <script>
