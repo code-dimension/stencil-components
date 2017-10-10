@@ -6,7 +6,7 @@ selector: `stc-tabs`
 
 ## How to use
 
-Use the component `stc-tab-header` for render a tab header and the component `stc-tab-content` to render the tab header content. 
+You've to use the component `stc-tab-header` for render a tab header and the component `stc-tab-content` to render the tab header content. 
 
 The prop **name** value should be equal for `stc-tab-header` and `stc-tab-content`.
 

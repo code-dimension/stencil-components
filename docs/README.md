@@ -21,3 +21,4 @@ https://unpkg.com/@code-dimension/stencil-components
 
 - [Chip](chip.html)
 - [Tabs](tabs.html)
+- [Tags](tags.html)
