@@ -120,7 +120,7 @@ declare global {
   }
 }
 
-import { StcTagsComponent as StcTags } from './components/tags/tags';
+import { StcTags as StcTags } from './components/tags/tags';
 
 interface HTMLStcTagsElement extends StcTags, HTMLElement {
 }
