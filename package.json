@@ -18,7 +18,8 @@
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "prepublish": "npm run build",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "start-prod": "sd concurrent \"stencil build --watch\" \"stencil-dev-server\" "
   },
   "dependencies": {
     "@stencil/core": "0.0.6-11"
