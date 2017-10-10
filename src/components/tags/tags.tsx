@@ -15,7 +15,7 @@ interface TagState extends Tag {
     tag: 'stc-tags',
     styleUrl: 'tags.scss'
 })
-export class StcTagsComponent {
+export class StcTags {
 
     @State() state: TagState[] = [];
 
