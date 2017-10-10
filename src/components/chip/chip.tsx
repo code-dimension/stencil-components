@@ -1,5 +1,5 @@
-import { Component, Prop, Event, EventEmitter, Method } from '@stencil/core';
-import { isUndefined, generateId } from '../../util/functions';
+import { Component, Prop, Event, EventEmitter } from '@stencil/core';
+import { isUndefined } from '../../util/functions';
 
 export interface StcChipCloseEvent {
     image: string;
@@ -14,7 +14,8 @@ export interface StcChipCloseEvent {
 })
 export class StcChip {
 
-    private id: string = generateId();
+    @Prop()
+    id: string;
 
     @Prop()
     image: string;
@@ -27,11 +28,6 @@ export class StcChip {
 
     @Event({ eventName: 'stc-chip-close' })
     close: EventEmitter;
-
-    @Method()
-    getId() {
-        return this.id;
-    }
 
     onClose() {
         const event: StcChipCloseEvent = {

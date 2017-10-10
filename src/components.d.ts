@@ -27,7 +27,7 @@ declare global {
   namespace JSXElements {
       export interface StcChipAttributes extends HTMLAttributes {
         
-          getId?: any,
+          id?: any,
           image?: any,
           text?: any,
           closeable?: boolean | "true" | "false"

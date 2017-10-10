@@ -33,6 +33,10 @@
           console.log('setProp', stcTags, stcTags.tags)
         }        
 
+        document.querySelector('stc-tags')
+          .addEventListener('stc-chip-close', (e) => {
+            console.log(e)
+          })
         
         // create();
         setTimeout(() => {
