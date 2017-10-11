@@ -1,3 +1,9 @@
+# v0.0.0-beta.1
+
+## Fixed Bugs 
+
+- Drowngrading stencil version from `0.0.6-11` to `0.0.6-10` to fix dist code bug 
+
 # v0.0.0-beta 
 
 ## Breaking Changes

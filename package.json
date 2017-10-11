@@ -1,6 +1,6 @@
 {
   "name": "@code-dimension/stencil-components",
-  "version": "0.0.0-beta",
+  "version": "0.0.0-beta.1",
   "description": "Stencil Components",
   "main": "dist/collection/index.js",
   "browser": "dist/stencilcomponents.js",
@@ -22,7 +22,7 @@
     "start-prod": "sd concurrent \"stencil build --watch\" \"stencil-dev-server\" "
   },
   "dependencies": {
-    "@stencil/core": "0.0.6-11"
+    "@stencil/core": "0.0.6-10"
   },
   "devDependencies": {
     "@stencil/dev-server": "0.0.17",
