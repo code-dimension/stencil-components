@@ -32,6 +32,12 @@
     "jest": "21.2.1",
     "tslint": "5.7.0"
   },
+  "keywords": [
+    "web-components",
+    "components",
+    "ui",
+    "stencil"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodeDimension/stencil-components.git"
