@@ -75,11 +75,11 @@ setTimeout(() => {
 
 | name | type | description |
 | ------ | ------ | ----------- | 
-| tags | { text: string, image?: string }[] | Tags' array will be rendered |
+| tags | { text: string, image?: string }[] | Tag list will be rendered |
 | placeholder | string | Custom placeholder of internal input element |
 
 ## Events
 
 | name | data | description |
 | ------ | ------ | ----------- | 
-| stc-tags-close | { text: string, image?: string, id: string } | Event emitted when a tag is closed |
+| stc-tags-close | { text: string, image?: string, id: string } | Event triggered when a tag is closed |
